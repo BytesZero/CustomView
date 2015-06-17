@@ -12,7 +12,10 @@ import android.view.View;
  * 自定义View
  */
 public class CustomView extends View {
+	//画笔对象
 	Paint paint;
+	//半径
+	int radiu=200;
 
 	public CustomView(Context context) {
 		super(context);
@@ -45,8 +48,12 @@ public class CustomView extends View {
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
 		//绘制圆环
-		canvas.drawCircle(300,300,200,paint);
+		canvas.drawCircle(300,300,radiu,paint);
+	}
 
-
+	public synchronized void setRadiu(int radiu) {
+		this.radiu = radiu;
+		//重绘
+		invalidate();
 	}
 }
