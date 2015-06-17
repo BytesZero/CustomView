@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 			}
 		};
 
-		handler.obtainMessage().sendToTarget();
+//		handler.obtainMessage().sendToTarget();
 
 
 	}
